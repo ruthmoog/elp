@@ -5,11 +5,36 @@
     --garden-city-black: #022023;
     --cloudy-sky-white: #f5f5f5;
     --tree-green: #8dc124;
+
+    scroll-behavior: smooth;
+
 }
 
 body {
     margin: 0;
 
+    a {
+        padding: 1px 3px;
+        border-radius: 2px;
+        border: 1px transparent solid;
+        text-decoration: underline;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+        border: 1px transparent solid;
+    }
+
+    @media (width >=800px) {
+        width: 60%;
+        margin: auto;
+        background: repeating-linear-gradient(45deg,
+                var(--cloudy-sky-white),
+                var(--cloudy-sky-white) 4rem,
+                #fff 0,
+                #fff 8rem);
+    }
 }
 
 .headings {
@@ -31,15 +56,29 @@ body {
         letter-spacing: 0.1rem;
         line-height: 2.4rem;
     }
+}
 
-    .short-name,
-    .heart {
-        color: var(--hi-vis-green);
-    }
+.short-name,
+.heart {
+    color: var(--hi-vis-green);
 }
 
 .main {
     background-color: var(--garden-city-blue);
+
+    a {
+        color: var(--garden-city-black);
+        background-color: var(--cloudy-sky-white);
+        text-decoration-color: var(--hi-vis-green);
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+        color: var(--tree-green);
+        background-color: var(--garden-city-blue);
+        border-color: var(--cloudy-sky-white);
+    }
 }
 
 .wild-litterpicks {
@@ -47,6 +86,8 @@ body {
     padding: 1rem;
     color: var(--garden-city-black);
     background-color: var(--hi-vis-green);
+    border-radius: 2px;
+
 }
 
 .events {
@@ -57,21 +98,43 @@ body {
     gap: 1rem;
 }
 
-.detailed-info {
-    display: flex;
-    flex-direction: column;
-}
-
 .event {
     background-color: var(--cloudy-sky-white);
     padding: 1rem;
     border-radius: 2px;
+    margin: 0;
+    letter-spacing: 0.1rem;
+
+    @media (width >=800px) {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        .event-date {
+            text-align: right;
+        }
+    }
+}
+
+
+.event-location {
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.detailed-info {
+    display: flex;
+    flex-direction: column;
 }
 
 .details {
     padding: 1rem;
     min-height: 3rem;
     line-height: 1.4rem;
+
+    @media (width >=800px) {
+        margin-bottom: 1rem;
+    }
 
     h2 {
         margin-top: 2rem;
@@ -87,7 +150,8 @@ body {
 }
 
 .instructions {
-    /* background-color: var(--hi-vis-green); */
+    border-radius: 2px;
+
     background: repeating-linear-gradient(135deg,
             var(--hi-vis-green),
             var(--hi-vis-green) 2rem,
@@ -100,11 +164,91 @@ body {
         color: var(--cloudy-sky-white);
     }
 
+    a {
+        color: var(--garden-city-black);
+        background-color: var(--cloudy-sky-white);
+        text-decoration-color: var(--hi-vis-green);
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+        color: var(--tree-green);
+        background-color: var(--garden-city-blue);
+        border-color: var(--cloudy-sky-white);
+    }
+
 }
 
 .highlight {
     background-color: var(--cloudy-sky-white);
     color: var(--garden-city-black);
     padding: 1rem;
-    border-radius: 10px;
+    margin-top: 3rem;
+    border-radius: 30px 30px 2px 30px;
+
+    @media (width >=555px) {
+        width: 60%;
+        margin-left: auto;
+    }
+}
+
+cite {
+    text-align: right;
+    display: block;
+}
+
+quote:before {
+    content: "“";
+    position: relative;
+    font-size: 6rem;
+    color: var(--hi-vis-green);
+    line-height: 1rem;
+    top: 30px;
+}
+
+.equipment {
+    border-radius: 2px;
+
+    background: var(--garden-city-blue);
+    color: var(--cloudy-sky-white);
+
+    &>p {
+        padding: 1rem;
+    }
+
+    .request-equipment {
+        padding: 1rem;
+        background-color: var(--tree-green);
+        color: var(--garden-city-black);
+        border-radius: 2px;
+    }
+
+    a {
+        color: var(--garden-city-black);
+        background-color: var(--cloudy-sky-white);
+        text-decoration-color: var(--hi-vis-green);
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+        color: var(--tree-green);
+        background-color: var(--garden-city-blue);
+        border-color: var(--cloudy-sky-white);
+    }
+
+}
+
+.footer {
+    min-height: 3rem;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    img {
+        width: 30%;
+    }
 }
