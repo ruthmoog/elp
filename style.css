@@ -1,0 +1,49 @@
+:root {
+    font: 1rem "Fira Sans", sans-serif;
+    --hi-vis-green: #9acd32;
+    --garden-city-blue: #065D67;
+    --garden-city-black: #022023;
+}
+
+body {
+    margin: 0;
+
+}
+
+
+.headings {
+    color: whitesmoke;
+    margin: 0;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+
+    h1 {
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 3rem;
+        line-height: 2.4rem;
+        letter-spacing: 0.3rem;
+    }
+
+    h2 {
+        text-transform: lowercase;
+        font-size: 1.25rem;
+        letter-spacing: 0.1rem;
+        line-height: 2.4rem;
+    }
+
+    .short-name,
+    .heart {
+        color: var(--hi-vis-green);
+    }
+}
+
+.main {
+    background-color: var(--garden-city-blue);
+}
+
+.wild-litterpicks {
+    margin: 1rem;
+    padding: 1rem;
+    color: var(--garden-city-black);
+    background-color: var(--hi-vis-green);
+}
