@@ -3,6 +3,8 @@
     --hi-vis-green: #9acd32;
     --garden-city-blue: #065D67;
     --garden-city-black: #022023;
+    --cloudy-sky-white: #f5f5f5;
+    --tree-green: #8dc124;
 }
 
 body {
@@ -10,9 +12,8 @@ body {
 
 }
 
-
 .headings {
-    color: whitesmoke;
+    color: var(--cloudy-sky-white);
     margin: 0;
     padding: 0.5rem 0.5rem 0 0.5rem;
 
@@ -46,4 +47,64 @@ body {
     padding: 1rem;
     color: var(--garden-city-black);
     background-color: var(--hi-vis-green);
+}
+
+.events {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    gap: 1rem;
+}
+
+.detailed-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.event {
+    background-color: var(--cloudy-sky-white);
+    padding: 1rem;
+    border-radius: 2px;
+}
+
+.details {
+    padding: 1rem;
+    min-height: 3rem;
+    line-height: 1.4rem;
+
+    h2 {
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.expander {
+    padding-block: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+
+}
+
+.instructions {
+    /* background-color: var(--hi-vis-green); */
+    background: repeating-linear-gradient(135deg,
+            var(--hi-vis-green),
+            var(--hi-vis-green) 2rem,
+            var(--tree-green) 0,
+            var(--tree-green) 4rem);
+
+    .litter-picking {
+        padding: 1rem;
+        background-color: var(--garden-city-blue);
+        color: var(--cloudy-sky-white);
+    }
+
+}
+
+.highlight {
+    background-color: var(--cloudy-sky-white);
+    color: var(--garden-city-black);
+    padding: 1rem;
+    border-radius: 10px;
 }
