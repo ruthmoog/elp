@@ -40,7 +40,7 @@ body {
 .headings {
     color: var(--cloudy-sky-white);
     margin: 0;
-    padding: 0.5rem 0.5rem 0 0.5rem;
+    padding: 1rem 1rem 0 1rem;
 
     h1 {
         text-transform: uppercase;
@@ -144,8 +144,10 @@ body {
 
 .expander {
     padding-block: 1.5rem;
-    line-height: 2rem;
     letter-spacing: 0.1rem;
+    font-size: 1.25rem;
+    line-height: 2.4rem;
+    font-weight: bold;
 
 }
 
@@ -186,6 +188,7 @@ body {
     padding: 1rem;
     margin-top: 3rem;
     border-radius: 30px 30px 2px 30px;
+    border: solid 4px var(--tree-green);
 
     @media (width >=555px) {
         width: 60%;
@@ -196,6 +199,7 @@ body {
 cite {
     text-align: right;
     display: block;
+    padding-top: 0.5rem;
 }
 
 quote:before {
