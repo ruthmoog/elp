@@ -166,6 +166,12 @@ body {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 1rem;
+
+    .preview-flyers {
+        max-width: 400px;
+        width: 90%;
+    }
+
 }
 
 .instructions {
@@ -228,7 +234,8 @@ quote:before {
     top: 30px;
 }
 
-.equipment {
+.equipment,
+.social {
     border-radius: 2px;
 
     background: var(--garden-city-blue);
@@ -238,7 +245,8 @@ quote:before {
         padding: 1rem;
     }
 
-    .request-equipment {
+    .request-equipment,
+    .social-media {
         padding: 1rem;
         background-color: var(--tree-green);
         color: var(--garden-city-black);
